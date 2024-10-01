@@ -1,29 +1,55 @@
-import { BiRadioCircle } from 'react-icons/bi';
-import { LuMoreHorizontal } from 'react-icons/lu';
-import { TbProgress } from 'react-icons/tb';
-import { IoCheckmarkDoneCircle } from 'react-icons/io5';
+import { ReactComponent as NoPriorityIcon } from '../icons_FEtask/No-priority.svg';
+import { ReactComponent as LowPriorityIcon } from '../icons_FEtask/Img - Low Priority.svg';
+import { ReactComponent as MediumPriorityIcon } from '../icons_FEtask/Img - Medium Priority.svg';
+import { ReactComponent as HighPriorityIcon } from '../icons_FEtask/Img - High Priority.svg';
+import { ReactComponent as UrgentIcon } from '../icons_FEtask/SVG - Urgent Priority colour.svg';
+import { ReactComponent as BacklogIcon } from '../icons_FEtask/Backlog.svg';
+import { ReactComponent as TodoIcon } from '../icons_FEtask/To-do.svg';
+import { ReactComponent as InProgressIcon } from '../icons_FEtask/in-progress.svg';
+import { ReactComponent as DoneIcon } from '../icons_FEtask/Done.svg';
+import { ReactComponent as CanceledIcon } from '../icons_FEtask/Cancelled.svg';
 import { AiFillCloseCircle, AiFillWarning } from 'react-icons/ai';
-import { BiSignal2, BiSignal3, BiSignal4 } from 'react-icons/bi';
-
 
 export const getPriorityIcon = (priority: string) => {
     switch (priority) {
-        case "No priority": return <LuMoreHorizontal color="#797d84" size={14} />
-        case "Low": return <BiSignal2 color='#6b6f76' size={14} />
-        case "Medium": return <BiSignal3 color='#6b6f76' size={14} />
-        case "High": return <BiSignal4 color='#6b6f76' size={14} />
-        case "Urgent": return <AiFillWarning color='#fc7840' size={14} />
-        default: return <AiFillWarning color='#fc7840' size={14} />
+        case "No priority": 
+            return <NoPriorityIcon width="16" height="16" />;
+        
+        case "Low": 
+            return <LowPriorityIcon width="16" height="16" />;
+        
+        case "Medium": 
+            return <MediumPriorityIcon width="16" height="16" />;
+        
+        case "High": 
+            return <HighPriorityIcon width="16" height="16" />;
+        
+        case "Urgent": 
+            return <UrgentIcon width="16" height="16" />;
+        
+        default: 
+            return <AiFillWarning color='#fc7840' size={14} />;
     }
 }
 
-export const getStatusIcon = (priority: string) => {
-    switch (priority) {
-        case "Backlog": return <BiRadioCircle color='#e2e2e2' size={24} />
-        case "Todo": return <BiRadioCircle color='#e2e2e2' size={24} />
-        case "In progress": return <TbProgress color='#f1ca4b' size={16} />
-        case "Done": return <IoCheckmarkDoneCircle color='#5e6ad2' size={16} />
-        case "Canceled": return <AiFillCloseCircle color='#94a2b3' size={16} />
-        default: return <AiFillCloseCircle color='#94a2b3' size={16} />
+export const getStatusIcon = (status: string) => {
+    switch (status) {
+        case "Backlog": 
+            return <BacklogIcon width="16" height="16" />;
+        
+        case "Todo": 
+            return <TodoIcon width="16" height="16" />;
+        
+        case "In progress": 
+            return <InProgressIcon width="16" height="16" />;
+        
+        case "Done": 
+            return <DoneIcon width="16" height="16" />;
+        
+        case "Canceled": 
+            return <CanceledIcon width="16" height="16" />;
+        
+        default: 
+            return <AiFillCloseCircle color='#94a2b3' size={16} />;
     }
 }
