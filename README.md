@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 87d7103dc1cce1eabe9af8ec0f1654ea5928055c
 ## Preview
 
 ![Desktop Screenshot 1](./preview/1.png)
